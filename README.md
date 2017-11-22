@@ -31,7 +31,7 @@ Once the above repository (refer to the repository structure given below) is clo
 
 ## Setting up the project in your machine
 
-1. Ensure you have MySQL Server installed and running on your machine
+1. Ensure you have MySQL Server installed and running on your machine (MySQL is already set up in your VMs with username:root and passowrd:root123)
 2. Create a schema ( with no tables ) in MySQL to be used by this application along with a user account through which our application can connect to that schema (table and data will be generated as you run the application).  
 3. Update ```env-variables.sh```(for Ubuntu)/```env-variables.ps1```(for Windows) with the schema name, username, password you created in Step 2 for MySQL.  
 4. To start the backend, open terminal from root directory and run following commands in same terminal -  
