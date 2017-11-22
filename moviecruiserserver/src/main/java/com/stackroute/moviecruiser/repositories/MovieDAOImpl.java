@@ -71,4 +71,9 @@ public class MovieDAOImpl implements MovieDAO {
 		return movie;
 	}
 
+	public List<Movie> getAllMovies() throws MovieNotFoundException {
+		
+		return getSession().createQuery("from Movie").list();
+	}
+
 }

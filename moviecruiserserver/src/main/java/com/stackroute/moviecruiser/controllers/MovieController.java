@@ -2,6 +2,8 @@ package com.stackroute.moviecruiser.controllers;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -78,5 +80,17 @@ public class MovieController {
 			return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_FOUND);
 		}
 		return new ResponseEntity<Movie>(thisMovie, HttpStatus.OK);
+	}
+	
+	@GetMapping(path="/")
+	public ResponseEntity<?> fetchAllMovies(HttpSession session) 
+	{
+		try {
+			return new ResponseEntity<List<Movie>>(movieService.getAllMovies(),HttpStatus.OK);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return new ResponseEntity<String>(e.getMessage(), HttpStatus.NOT_FOUND);
+		}
+		
 	}
 }

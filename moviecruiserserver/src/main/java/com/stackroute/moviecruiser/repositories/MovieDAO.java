@@ -14,5 +14,7 @@ public interface MovieDAO {
 	public boolean deleteMovieById(int id) throws MovieNotFoundException;
 
 	public Movie getMovieById(int id) throws MovieNotFoundException;
+	
+	public List<Movie> getAllMovies() throws  MovieNotFoundException;
 
 }

@@ -53,4 +53,11 @@ public class MovieServiceImpl implements MovieService {
 	public Movie getMovieById(int id) throws MovieNotFoundException {
 		return movieDAO.getMovieById(id);
 	}
+
+	
+	public List<Movie> getAllMovies() throws MovieNotFoundException {
+		
+		return movieDAO.getAllMovies();
+	}
+	
 }
