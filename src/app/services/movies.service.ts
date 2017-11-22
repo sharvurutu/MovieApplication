@@ -17,7 +17,6 @@ export class MoviesService {
       releaseDate: release_date, voteAverage: vote_average, voteCount: vote_count });
     return this.http.post(this.serviceUrl, json, { headers: this.headers }).toPromise().catch(this.handleError);
   }
-  
   checkWatchList(id: number) {
     const url = this.serviceUrl + id;
     return this.http.get(url).toPromise().then(res => res ? res.json() : null).catch(this.handleError);
