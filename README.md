@@ -33,9 +33,9 @@ Once the above repository (refer to the repository structure given below) is clo
 
 1. Ensure you have MySQL Server installed and running on your machine
 2. Create a schema ( with no tables ) in MySQL to be used by this application along with a user account through which our application can connect to that schema (table and data will be generated as you run the application).  
-3. Update ```env-variables.sh``` with the schema name, username, password you created in Step 2 for MySQL.  
+3. Update ```env-variables.sh```(for Ubuntu)/```env-variables.ps1```(for Windows) with the schema name, username, password you created in Step 2 for MySQL.  
 4. To start the backend, open terminal from root directory and run following commands in same terminal -  
-    a. For Ubuntu - `. ./env-variables.sh` and Windows - `env-variables.sh` to set necessary the environment variables as these would be required in your backend server application code  
+    a. For Ubuntu - `. ./env-variables.sh` and Windows - `env-variables.ps1` (in Powershell) to set necessary the environment variables as these would be required in your backend server application code  
     b. `mvn package`  
     c. `npm run spring-boot:run`  
 5. This application is fetching data from `The Movie Database API` (https://api.themoviedb.org/3). You need to register for an API key here and update property `tmdbApiKey` of the Angular [ Search service ](/src/app/services/search.service.ts). To get the API key -  
