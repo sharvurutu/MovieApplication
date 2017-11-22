@@ -4,8 +4,8 @@ Also, there is a bug in the application which you need to fix as described below
 
 
 ## Bug
-If you search for a movie title two times, the page doesn't refresh with the new results second time.
-Expected : Search results should be displayed for every search made.
+If you search for a movie title two times, the page doesn't refresh with the new results second time.  
+Expected : Search results should be displayed for every search made.  
 
 
 
