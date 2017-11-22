@@ -173,7 +173,7 @@ Run `npm run e2e` to execute the protractor end-to-end tests.
 > # Submitting your work for Evaluation
 
 1. When you are ready for submission and pushed your code into your Gitlab repository, you need to open our Automated Evaluation System by navigating to the following URL:
- hobbes-cts.stackroute.in
+ hobbes-edge.stackroute.in
 2. Click the Login icon and provide your Gitlab credentials.
 3. For ```Assignment repository```, provide the Assignment name by typing ```movie``` in the drop down for assignment to be visible and select it.
 4. For ```Your solution repository```, provide your completed assignment repository for evaluation - select same from the list of repositories being shown in the drop down.
