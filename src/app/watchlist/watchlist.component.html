@@ -1,3 +1,13 @@
-<p>
-  watchlish works!
-</p>
+<div *ngFor = 'let movie of movies'>
+<div class="moviePoster">
+    <a class="movieItem" (click)="goToDetail(movie.id)">
+  <img class="d-flex mr-3 img-responsive" src="https://image.tmdb.org/t/p/w300/{{movie.posterPath}}" alt="{{movie.title}}">
+</a>
+</div>
+<div class="movieDescription">{{movie.name}} ({{movie.releaseDate}})</div>
+<div class= "movieRating">{{movie.voteAverage}} ({{movie.voteCount}})</div>
+<div>
+ <input  class="movieCommentsInpt" [(ngModel)] = 'comment' type="text">
+  <button class="movieCommentsInpt" (click) = 'upDateComment(movie.id)'> update comments</button>
+</div>
+</div>

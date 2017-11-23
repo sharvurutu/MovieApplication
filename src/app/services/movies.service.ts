@@ -32,6 +32,11 @@ export class MoviesService {
     return this.http.delete(uri, { headers: this.headers }).toPromise().catch(this.handleError);
   }
 
+  getWatchlistMovies() {
+    const uri = this.serviceUrl;
+    return this.http.get(uri).map(res => res ? res.json() : null);
+  }
+
   private handleError(error: any) {
     console.error('An error occurred', error); // for demo purposes only
   }
