@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
-  searchResults: Array < Object > = [];
+  searchResults;
   constructor(private searchService: SearchService, private router: Router) {}
 
   ngOnInit() {
-    this.searchResults = this.searchService.sharedSearchResult;
+     this.searchService.changedResults.subscribe(res => {
+       this.searchResults = res;
+     })
   }
 
   goToDetail(id: number) {

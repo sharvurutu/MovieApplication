@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { DiscoverMoviesComponent } from './discover-movies/discover-movies.component';
 import { DiscoverTvComponent } from './discover-tv/discover-tv.component';
 import { TvShowComponent } from './tv-show/tv-show.component';
+import { WatchlistComponent } from './watchlist/watchlist.component';
 
 export const myComponents = [
   AppComponent,
@@ -28,7 +29,8 @@ export const myComponents = [
   HomeComponent,
   DiscoverMoviesComponent,
   DiscoverTvComponent,
-  TvShowComponent
+  TvShowComponent,
+  WatchlistComponent
 ];
 
 @NgModule({

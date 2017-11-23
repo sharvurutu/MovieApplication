@@ -15,6 +15,9 @@
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/discover-tv']" [routerLinkActive]="['active']">Discover TV</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/watchlist']" [routerLinkActive]="['active']">WatchList</a>
+        </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input name="Searchbox" [(ngModel)]="searchQuery" #searchBox id="search-box" class="form-control" (keyup.enter)="search();searchBox.value=''" type="text" placeholder="Search" aria-label="Search">

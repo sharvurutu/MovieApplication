@@ -8,6 +8,7 @@ import { SearchResultsComponent } from './../search-results/search-results.compo
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { WatchlistComponent } from '../watchlist/watchlist.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'tv/:id', component: TvShowComponent },
   { path: 'home', component: HomeComponent },
   { path: 'discover-movies', component: DiscoverMoviesComponent },
-  { path: 'discover-tv', component: DiscoverTvComponent }
+  { path: 'discover-tv', component: DiscoverTvComponent },
+  { path: 'watchlist', component: WatchlistComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

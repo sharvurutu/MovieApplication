@@ -18,9 +18,6 @@ export class SearchComponent {
   }
 
   public search() {
-    this.searchService.find('superheroes').then(response => {
-      this.searchService.sharedSearchResult = response.results;
-      this.navigateToSearchResults();
-    });
+  
   }
 }

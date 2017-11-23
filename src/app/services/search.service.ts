@@ -2,16 +2,21 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Subject } from 'rxjs/Subject';
-
+import{ Observable } from 'rxjs/Observable';
+import { ReplaySubject } from 'rxjs/ReplaySubject';
 @Injectable()
 export class SearchService {
 
   constructor(private http: Http) {}
+//: Array < Object > = [];
+  // public sharedSearchResult;
+  public changedResults = new ReplaySubject();
 
-  public sharedSearchResult: Array < Object > = [];
-
+  public onSearch(result) {
+    this.changedResults.next(result);
+  }
   /* Put the API key for `The Movie Database API` you have generated here */
-  private tmdbApiKey = '';
+  private tmdbApiKey = '46cb0826bc9d924445bc90903e183ebf';
 
   private searchUrl = 'https://api.themoviedb.org/3/search/movie?api_key=' +
     this.tmdbApiKey + '&language=en-US&page=1&include_adult=false&query=';
